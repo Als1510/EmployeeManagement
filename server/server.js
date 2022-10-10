@@ -7,7 +7,7 @@ require('dotenv').config()
 app.use(express.json({extended: false}));
 
 const corsOptions = {
-  origin: ["http://localhost:3000"]
+  origin: ["http://localhost:3000", "https://employee-management1.netlify.app"]
 }
 
 app.use(cors(corsOptions))

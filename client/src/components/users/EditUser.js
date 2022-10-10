@@ -23,12 +23,14 @@ const EditUser = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    await axios.put(`https://employeemanagementbackend.herokuapp.com/api/users/${id}`, user);
     await axios.put(`http://localhost:5000/api/users/${id}`, user);
     navigate('/');
   }
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:5000/api/users/${id}`);
+    // const result = await axios.get(`http://localhost:5000/api/users/${id}`);
+    const result = await axios.get(`https://employeemanagementbackend.herokuapp.com/api/users/${id}`);
     setUser(result.data)
   }
 
