@@ -19,7 +19,7 @@ const AddUser = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     // await axios.post("http://localhost:5000/api/users", user);
-    await axios.post("https://employeemanagementbackend.herokuapp.com/api/users", user);
+    await axios.post("https://employeemanagement-backend.onrender.com/api/users", user);
     navigate('/');
   }
 
